@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <body>
+        <div id="open" class="button">
+            <button>Get more Information</button>
+        </div>
+
+        <div id="email-prompt" class="request-email-container">
+            <h4>Please enter your email and we will send you more information about the course!</h4>
+            <div class="input-container">
+                <input placeholder="Email" type="email" name="email" id="email" class="input-field" />
+                <label for="email" class="text-label">Email</label>
+            </div>
+            <div class="checkbox-container">
+
+
+                <label class="checkbox path">
+                    <input type="checkbox">
+                    <svg viewBox="0 0 21 21">
+                        <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                    </svg>
+                </label>
+
+
+                <label for="confirm">[Accept that we will save this email]</label>
+            </div>
+            <div id="send" class="button">
+                <button>SEND</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
