@@ -33,14 +33,6 @@ body {
     text-align: center;
 }
 
-form {
-    flex-basis: 100%;
-    position: relative;
-    order: 2;
-    margin-top: 1rem;
-    padding: 0;
-}
-
 h1 {
     color: #f0edf5;
     font-family: "Josefin Sans", sans-serif;
@@ -53,7 +45,7 @@ h1 {
 .input-container {
     position: relative;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin: 25px 0;
     width: 400px;
     display: block;
 }
@@ -174,12 +166,41 @@ button:hover {
     position: absolute;
     color: #f0edf5;
     font-family: "Poppins", sans-serif;
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(29, 29, 29);
     padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    text-align: center;
+}
+
+.request-email-container::after {
+    content: "";
+    width: calc(100%);
+    height: 14px;
+    background-image: url('images/triple-lines-3.png');
+    -webkit-background-size: 140% 110%;
+    background-size: 140% 110%;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    background-repeat: no-repeat;
+    bottom: -8px;
+}
+
+.request-email-container::before {
+    content: "";
+    width: calc(100%);
+    height: 14px;
+    background-image: url('images/triple-lines-3.png');
+    -webkit-background-size: 140% 110%;
+    background-size: 140% 110%;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    background-repeat: no-repeat;
+    top: -4px;
 }
 
 .checkbox-container {
@@ -187,7 +208,17 @@ button:hover {
     display: flex;
 }
 
-@media (max-width:700px) {
+.close-container {
+    top: 5px;
+    right: 15px;
+    position: absolute;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+@media (max-width:800px) {
     .input-field {
         max-width: calc(100% - 32px);
     }
@@ -196,6 +227,9 @@ button:hover {
     }
     .input-container::after {
         width: 100%;
+    }
+    .request-email-container {
+        width: 65vw;
     }
 }
 
@@ -275,43 +309,57 @@ button:hover {
     transition: stroke-dasharray 0.6s, stroke-dashoffset 0.6s;
 }
 
-.checkbox.bounce {
-    --stroke: var(--tick);
+#accept.error {
+    border: 3px solid red;
 }
 
-.checkbox.bounce input:checked {
-    --s: 11px;
+
+/*///////////close button/////////////////*/
+
+.leftright {
+    height: 1px;
+    width: 35px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: #F4A259;
+    border-radius: 0px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in;
 }
 
-.checkbox.bounce input:checked+svg {
-    -webkit-animation: bounce 0.4s linear forwards 0.2s;
-    animation: bounce 0.4s linear forwards 0.2s;
+.rightleft {
+    height: 1px;
+    width: 35px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: #F4A259;
+    border-radius: 0px;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-in;
 }
 
-.checkbox.bounce svg {
-    --scale: 0;
+.close {
+    margin: 45px 0 0 -20px;
+    position: absolute;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in;
+    opacity: 0;
 }
 
-@-webkit-keyframes bounce {
-    50% {
-        transform: scale(1.2);
-    }
-    75% {
-        transform: scale(0.9);
-    }
-    100% {
-        transform: scale(1);
-    }
+.close-container:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: #F25C66;
 }
 
-@keyframes bounce {
-    50% {
-        transform: scale(1.2);
-    }
-    75% {
-        transform: scale(0.9);
-    }
-    100% {
-        transform: scale(1);
-    }
+.close-container:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: #F25C66;
+}
+
+.close-container:hover label {
+    opacity: 1;
 }
