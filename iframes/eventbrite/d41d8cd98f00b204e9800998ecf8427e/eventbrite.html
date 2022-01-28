@@ -1,46 +1,33 @@
-<!DOCTYPE html>
-<html>
+<button id="eventbrite-button" type="button" class="button">
+  Get a ticket
+</button>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-</head>
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 
-<body>
-    <button id="eventbrite-button" type="button" class="button">
-      Get a ticket
-    </button>
+<script type="text/javascript">
+    $(document).ready(function() {
+        let id = $(location).attr("hash"); //get id by hash in url (#...)
+        id = id.substring(1); //return the #
+        console.log(id);
 
-    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+        if (id.length < 2) {
+            return;
+        }
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            let id = $(location).attr("hash"); //get id by hash in url (#...)
-            id = id.substring(1); //return the #
-            console.log(id);
+        var exampleCallback = function() {
+            console.log("Order complete!");
+        };
 
-            if (id.length < 2) {
-                return;
-            }
-
-            var exampleCallback = function() {
-                console.log("Order complete!");
-            };
-
-            window.EBWidgets.createWidget({
-                widgetType: "checkout",
-                eventId: id,
-                modal: true,
-                modalTriggerElementId: "eventbrite-button",
-                onOrderComplete: exampleCallback,
-            });
+        window.EBWidgets.createWidget({
+            widgetType: "checkout",
+            eventId: id,
+            modal: true,
+            modalTriggerElementId: "eventbrite-button",
+            onOrderComplete: exampleCallback,
         });
-    </script>
-    <!-- 
+    });
+</script>
+<!-- 
     <button id="eventbrite-widget-modal-trigger-225242906597" type="button" class="button">
       Buy Tickets
     </button>
@@ -60,6 +47,3 @@
             onOrderComplete: exampleCallback,
         });
     </script> -->
-</body>
-
-</html>
