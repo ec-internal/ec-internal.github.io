@@ -3,7 +3,7 @@ body {
 }
 
 .scroll-top-container {
-    z-index: 20;
+    z-index: 1000 !important;
     position: fixed;
     bottom: 40px;
     right: 40px;
