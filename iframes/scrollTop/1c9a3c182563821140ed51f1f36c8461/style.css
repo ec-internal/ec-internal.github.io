@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+}
+
+.scroll-top-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( 134deg, rgba(149, 83, 255, 1) 0%, rgba(255, 78, 235, 1) 33%, rgba(255, 150, 112, 1) 67%, rgba(0, 212, 207, 1) 100%);
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+}
+
+.scroll-top {
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    background-color: #130E24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+.symbol {
+    transition: transform 0.2s ease-in;
+}
+
+.scroll-top-container:hover {
+    transform: translateY(-5px);
+}
+
+.scroll-top-container:hover .symbol {
+    transform: translateY(-2px);
+}
