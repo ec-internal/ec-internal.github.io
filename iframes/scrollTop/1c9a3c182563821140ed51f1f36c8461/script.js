@@ -5,13 +5,12 @@ let mybutton = document.getElementById("scroll-top");
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
-
-    console.log(document.body.scrollTop)
-    console.log(document.documentElement.scrollTop)
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        mybutton.style.visibility = "visible";
+        setTimeout(() => { mybutton.style.display = "flex" }, 2000);
     } else {
-        mybutton.style.display = "none";
+        mybutton.style.visibility = "hidden";
+        setTimeout(() => { mybutton.style.display = "none" }, 2000);
     }
 }
 

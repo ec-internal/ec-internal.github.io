@@ -12,6 +12,7 @@
     background: linear-gradient( 134deg, rgba(149, 83, 255, 1) 0%, rgba(255, 78, 235, 1) 33%, rgba(255, 150, 112, 1) 67%, rgba(0, 212, 207, 1) 100%);
     cursor: pointer;
     transition: transform 0.2s ease-in;
+    transition: visibility 1.5s ease-in;
 }
 
 .scroll-top {
