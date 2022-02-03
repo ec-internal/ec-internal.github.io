@@ -4,13 +4,18 @@ let mybutton = document.getElementById("scroll-top");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() { scrollFunction() };
 
+let displayTimeout;
+
 function scrollFunction() {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        mybutton.style.visibility = "visible";
-        setTimeout(() => { mybutton.style.display = "flex" }, 2000);
+    console.log(document.documentElement.scrollTop);
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        clearTimeout(displayTimeout);
+        mybutton.style.display = "flex"
+        mybutton.style.opacity = 1;
     } else {
-        mybutton.style.visibility = "hidden";
-        setTimeout(() => { mybutton.style.display = "none" }, 2000);
+        clearTimeout(displayTimeout);
+        mybutton.style.opacity = 0;
+        displayTimeout = setTimeout(() => { mybutton.style.display = "none" }, 1000);
     }
 }
 
