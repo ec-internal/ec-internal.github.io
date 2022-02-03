@@ -1,8 +1,4 @@
-body {
-    background: #000;
-}
-
-.button {
+.eventbrite-button {
     display: block;
     text-align: center;
     justify-content: center;
@@ -10,10 +6,6 @@ body {
     position: relative;
     width: 100%;
     transition: all 0.3s;
-}
-
-button {
-    display: block;
     margin: 0 auto;
     background: linear-gradient( 134deg, rgba(149, 83, 255, 1) 0%, rgba(255, 78, 235, 1) 33%, rgba(255, 150, 112, 1) 67%, rgba(0, 212, 207, 1) 100%);
     box-shadow: 0px 0px 20px #fff;
