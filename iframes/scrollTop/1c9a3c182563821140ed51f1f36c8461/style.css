@@ -1,7 +1,3 @@
-body {
-    background-color: black;
-}
-
 .scroll-top-container {
     z-index: 1000 !important;
     position: fixed;
