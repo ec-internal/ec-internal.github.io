@@ -7,7 +7,6 @@ window.onscroll = function() { scrollFunction() };
 let displayTimeout;
 
 function scrollFunction() {
-    console.log(document.documentElement.scrollTop);
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         clearTimeout(displayTimeout);
         mybutton.style.display = "flex"
