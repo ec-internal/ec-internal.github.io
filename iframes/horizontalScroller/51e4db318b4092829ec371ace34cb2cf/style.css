@@ -1,31 +1,43 @@
-.eventbrite-button {
-    display: block;
-    text-align: center;
+    .container {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+}
+
+.img-container {
+    margin: 7px;
+    height: 15vw;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    width: 100%;
-    transition: all 0.3s;
-    margin: 0 auto;
-    background: linear-gradient( 134deg, rgba(149, 83, 255, 1) 0%, rgba(255, 78, 235, 1) 33%, rgba(255, 150, 112, 1) 67%, rgba(0, 212, 207, 1) 100%);
-    box-shadow: 0px 0px 20px #fff;
-    background-size: 200% 200%;
-    border: none;
-    color: #f0edf5;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 12px 30px 12px;
-    cursor: pointer;
-    transition: color 0.3s;
-    border-radius: 30px;
-    transition: background 2s ease-out;
 }
 
-button:hover {
-    background-position: 100%;
+.c1 {
+    box-shadow: 7px 7px 0 0 rgb(149, 84, 255);
 }
 
-.button:hover {
-    transform: translateY(-6px);
+.c2 {
+    box-shadow: 7px 7px 0 0 rgb(255, 78, 235);
 }
+
+.c3 {
+    box-shadow: 7px 7px 0 0 rgb(255, 150, 112);
+}
+
+.c4 {
+    box-shadow: 7px 7px 0 0 rgb(0, 212, 207);
+}
+
+img {
+    margin: 20px;
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+}
+
+@media screen and (max-width: 700px) {
+    .img-container {
+        height: 25vw;
+    }
