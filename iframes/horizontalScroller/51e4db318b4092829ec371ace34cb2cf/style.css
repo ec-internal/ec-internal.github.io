@@ -1,43 +1,44 @@
-    .container {
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    overflow: hidden;
-}
-
-.img-container {
-    margin: 7px;
-    height: 15vw;
-    border-radius: 10px;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.c1 {
-    box-shadow: 7px 7px 0 0 rgb(149, 84, 255);
-}
-
-.c2 {
-    box-shadow: 7px 7px 0 0 rgb(255, 78, 235);
-}
-
-.c3 {
-    box-shadow: 7px 7px 0 0 rgb(255, 150, 112);
-}
-
-.c4 {
-    box-shadow: 7px 7px 0 0 rgb(0, 212, 207);
-}
-
-img {
-    margin: 20px;
-    max-width: calc(100% - 20px);
-    max-height: calc(100% - 20px);
-}
-
-@media screen and (max-width: 700px) {
-    .img-container {
-        height: 25vw;
-    }
+                                                                .container {
+                                                                width: 100%;
+                                                                display: flex;
+                                                                flex-flow: row;
+                                                                overflow: hidden;
+                                                                -webkit-mask-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+                                                            }
+                                                            
+                                                            .img-container {
+                                                                margin: 7px;
+                                                                height: 15vw;
+                                                                border-radius: 10px;
+                                                                background-color: #fff;
+                                                                display: flex;
+                                                                justify-content: center;
+                                                                align-items: center;
+                                                            }
+                                                            
+                                                            .c1 {
+                                                                box-shadow: 7px 7px 0 0 rgb(149, 84, 255);
+                                                            }
+                                                            
+                                                            .c2 {
+                                                                box-shadow: 7px 7px 0 0 rgb(255, 78, 235);
+                                                            }
+                                                            
+                                                            .c3 {
+                                                                box-shadow: 7px 7px 0 0 rgb(255, 150, 112);
+                                                            }
+                                                            
+                                                            .c4 {
+                                                                box-shadow: 7px 7px 0 0 rgb(0, 212, 207);
+                                                            }
+                                                            
+                                                            img {
+                                                                margin: 20px;
+                                                                max-width: calc(100% - 20px);
+                                                                max-height: calc(100% - 20px);
+                                                            }
+                                                            
+                                                            @media screen and (max-width: 700px) {
+                                                                .img-container {
+                                                                    height: 25vw;
+                                                                }
