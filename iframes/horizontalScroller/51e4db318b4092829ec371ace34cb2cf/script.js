@@ -59,7 +59,6 @@ function renderImages() {
 
     let perView = 5;
     let spacing = 25;
-    console.log(window.innerWidth)
     if (window.innerWidth < 1100) {
         perView = 5;
         spacing = 10;
@@ -68,7 +67,6 @@ function renderImages() {
         perView = 3;
         spacing = 5;
     }
-    console.log(window.innerWidth)
 
     var slider = new KeenSlider("#my-keen-slider", {
         loop: true,
