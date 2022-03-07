@@ -1,4 +1,11 @@
  document.getElementById("submit").addEventListener("click", () => {
+     let location = window.location.hash;
+     if (!location) {
+         location = "no location defined"
+     } else {
+         location = location.substring(1);
+     }
+
      let errors = [];
 
      // get all values from form
@@ -27,7 +34,7 @@
              To: "office@everyonecodes.io",
              From: "hi@xschoenberger.com",
              Subject: `Contact Request from ${name}`,
-             Body: `<h1 style="margin: 0; padding:10px 10px 0px 10px;">Contact Request</h1><small style="font-style:italic;font-weight:bold;color:grey;padding: 0px 10px 10px 10px;">from ${name}</small><p style="padding: 10px;">${message}</p><small style="padding: 10px;">entered email: ${email}</small>`,
+             Body: `<h1 style="margin: 0; padding:10px 10px 0px 10px;">Contact Request</h1><small style="font-style:italic;font-weight:bold;color:grey;padding: 0px 10px 10px 10px;">from ${name}</small><small style="font-style:italic;font-weight:bold;color:grey;padding: 0px 10px 10px 10px;">website location: ${location}</small><p style="padding: 10px;">${message}</p><small style="padding: 10px;">entered email: ${email}</small>`,
          }).then((message) => {
              if (message === "OK") { //on successfull send
                  success = true;
