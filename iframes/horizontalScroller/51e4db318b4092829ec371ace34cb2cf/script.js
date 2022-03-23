@@ -9,7 +9,7 @@ window.onload = function() {
 
     axios({
             method: 'get',
-            url: 'https://api.github.com/repos/ec-internal/ec-internal.github.io/contents/iframes/horizontalScroller/51e4db318b4092829ec371ace34cb2cf/images/',
+            url: 'https://api.github.com/repos/ec-internal/ec-internal.github.io/contents/website-data/alumni-companies/',
             responseType: 'stream',
             headers: {
                 Authorization: token
