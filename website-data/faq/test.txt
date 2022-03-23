@@ -1,5 +1,5 @@
-Q:I completed the registration but didn’t receive a confirmation email. What should I do?
-A:Sometimes it can take up to one hour to receive the confirmation email. Please also have a look in your spam folder. If you entered the correct email address, waited for one hour and still didn’t receive an email then please register again.
+Q:I completed the registration but didn't receive a confirmation email. What should I do?
+A:Sometimes it can take up to one hour to receive the confirmation email. Please also have a look in your spam folder. If you entered the correct email address, waited for one hour and still didn't receive an email then please register again.
 
 Q:Why is this application process so long and divided into numerous phases? 
 A:We have designed a unique application process in order to choose the most skilled and committed participants for our next intake. In each phase, a different skill needed for the course is tested. 
@@ -8,7 +8,7 @@ Q:How is the application process structured and what will be tested?
 A:We are looking for people who are highly motivated. The application process is divided into four phases. In each phase, a different skill needed for the course is assessed. These tests consist of a logical thinking part, English comprehension, motivation, teamwork etc.
 After every phase, only a certain number of the most suitable applicants will continue to the next phase. 
 
-Q:Do I need to fill out the “Resumé” section in the application system?
+Q:Do I need to fill out the "Resume" section in the application system?
 A:No, this is not necessary. This information is not taken into account in the selection process.
 
 Q:I have completed Phase 1, what shall I do next?
