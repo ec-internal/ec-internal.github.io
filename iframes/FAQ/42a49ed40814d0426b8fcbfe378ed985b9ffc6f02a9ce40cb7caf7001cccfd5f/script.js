@@ -25,7 +25,7 @@ function parseQuestions(input) {
     const questionFlag = 'Q:';
     const answerFlag = 'A:';
 
-    let inputArray = input.split('\n');
+    let inputArray = input.split('\r\n');
 
     let questionBuffer = {
         question: '',
@@ -35,8 +35,9 @@ function parseQuestions(input) {
     let currentTextType = 0; //0 = not defined, 1 = question, 2 = answer
 
     for (line of inputArray) {
+        console.log(line)
         if (line.startsWith(questionFlag)) {
-            if (questionBuffer.questionBuffer.length > 0) {
+            if (questionBuffer.question.length > 0) {
                 parsedQuestions.push({...questionBuffer })
             }
             questionBuffer = {
@@ -57,7 +58,10 @@ function parseQuestions(input) {
                 questionBuffer.answer += '\n' + line
             }
         }
+    }
 
+    if (questionBuffer.question.length > 0) {
+        parsedQuestions.push({...questionBuffer })
     }
 
     return parsedQuestions;
