@@ -1,6 +1,3 @@
-//struct.txt: https://drive.google.com/file/d/16OrXRMruNfMxjgSfPdObuIedPjXbBUrA/view?usp=sharing
-//api key: AIzaSyC_FVBSm45ll1vbFk9cpXLORkx_A_R7_wM
-
 window.onload = function() {
     let fileId = window.location.hash;
     if (!fileId) {
@@ -12,11 +9,14 @@ window.onload = function() {
 
     axios({
             method: 'get',
-            url: `https://api.github.com/repos/ec-internal/ec-internal.github.io/contents/website-data/alumni-companies/`,
+            url: `https://api.github.com/repos/ec-internal/ec-internal.github.io/contents/website-data/faq/${fileId}`,
             responseType: 'stream',
         })
         .then(function(response) {
-            let data = response.data;
+            console.log(response.data)
+            let b64Data = response.data.content;
+            let data = atob(b64Data)
+            console.log(data)
             renderQuestions(parseQuestions(data));
             enableToggle();
         });
@@ -27,7 +27,7 @@ function parseQuestions(input) {
     const questionFlag = 'Q:';
     const answerFlag = 'A:';
 
-    let inputArray = input.split('\r\n');
+    let inputArray = input.split('\n');
 
     let questionBuffer = {
         question: '',
