@@ -13,10 +13,8 @@ window.onload = function() {
             responseType: 'stream',
         })
         .then(function(response) {
-            console.log(response.data)
             let b64Data = response.data.content;
             let data = atob(b64Data)
-            console.log(data)
             renderQuestions(parseQuestions(data));
             enableToggle();
         });
@@ -74,7 +72,6 @@ function parseQuestions(input) {
 function renderQuestions(questions) {
     for (let question of questions) {
         let template = `<div class="container"><div class="question">${question.question}</div><div class="answercont"><div class="answer">${question.answer}</div></div></div>`;
-        console.log(template)
         $('#faq').append(template);
     }
 }
