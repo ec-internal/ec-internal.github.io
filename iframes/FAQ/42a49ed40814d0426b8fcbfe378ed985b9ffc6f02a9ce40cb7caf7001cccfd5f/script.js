@@ -36,6 +36,7 @@ function parseQuestions(input) {
     let currentTextType = 0; //0 = not defined, 1 = question, 2 = answer
 
     for (line of inputArray) {
+        console.log(line)
         if (line.startsWith('#')) {
             continue;
         }
@@ -56,13 +57,13 @@ function parseQuestions(input) {
             currentTextType = 2;
         } else {
             if (currentTextType == 1) {
-                questionBuffer.question += line + '<br>';
+                questionBuffer.question += '<br>' + line;
             } else if (currentTextType == 2) {
                 if (line.startsWith(listFlag)) {
                     line = line.slice(listFlag.length);
                     questionBuffer.answer += '<li>' + line + '</li>';
                 } else {
-                    questionBuffer.answer += line + '<br>';
+                    questionBuffer.answer += '<br>' + line;
                 }
             }
         }
