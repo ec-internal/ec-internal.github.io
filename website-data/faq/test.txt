@@ -1,5 +1,7 @@
 Q:I completed the registration but didn't receive a confirmation email. What should I do?
 A:Sometimes it can take up to one hour to receive the confirmation email. Please also have a look in your spam folder. If you entered the correct email address, waited for one hour and still didn't receive an email then please register again.
+- listTest
+- listTes2
 
 Q:Why is this application process so long and divided into numerous phases? 
 A:We have designed a unique application process in order to choose the most skilled and committed participants for our next intake. In each phase, a different skill needed for the course is tested. 

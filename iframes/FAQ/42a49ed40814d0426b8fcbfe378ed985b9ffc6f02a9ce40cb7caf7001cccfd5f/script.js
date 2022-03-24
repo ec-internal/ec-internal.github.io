@@ -55,9 +55,13 @@ function parseQuestions(input) {
             currentTextType = 2;
         } else {
             if (currentTextType == 1) {
-                questionBuffer.question += '<br>' + line;
+                questionBuffer.question += line + '<br>';
             } else if (currentTextType == 2) {
-                questionBuffer.answer += '<br>' + line
+                if (line.startsWith("- ")) {
+                    questionBuffer.answer += '<li>' + line + '</li><br>';
+                } else {
+                    questionBuffer.answer += line + '<br>';
+                }
             }
         }
     }
