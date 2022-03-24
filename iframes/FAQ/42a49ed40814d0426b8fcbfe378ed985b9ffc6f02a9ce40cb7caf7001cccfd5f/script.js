@@ -24,6 +24,7 @@ function parseQuestions(input) {
     let parsedQuestions = [];
     const questionFlag = 'Q:';
     const answerFlag = 'A:';
+    const listFlag = '- ';
 
     let inputArray = input.split('\n');
 
@@ -57,8 +58,9 @@ function parseQuestions(input) {
             if (currentTextType == 1) {
                 questionBuffer.question += line + '<br>';
             } else if (currentTextType == 2) {
-                if (line.startsWith("- ")) {
-                    questionBuffer.answer += '<li>' + line + '</li><br>';
+                if (line.startsWith(listFlag)) {
+                    line = line.slice(listFlag.length);
+                    questionBuffer.answer += '<li>' + line + '</li>';
                 } else {
                     questionBuffer.answer += line + '<br>';
                 }

@@ -12,8 +12,8 @@ body {
     width: 60%;
 }
 
-h1 {
-    margin-bottom: 20px;
+li {
+    margin-left: 20px;
 }
 
 .container {
@@ -21,7 +21,7 @@ h1 {
     color: white;
     border-radius: 15px;
     box-shadow: 4px 4px 0px 0 #00D4CF;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .question {
