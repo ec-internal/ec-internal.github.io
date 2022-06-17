@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <body>
+        <form id="form" onsubmit="return false;">
+            <!--   <h1>CONTACT</h1> -->
+            <div class="input-container">
+                <input placeholder="Company" type="text" name="company" id="company" class="input-field" />
+                <label for="company" class="text-label">Company</label>
+            </div>
+            <div class="input-container">
+                <input placeholder="Name" type="text" name="name" id="name" class="input-field" />
+                <label for="name" class="text-label">Name</label>
+            </div>
+            <div class="input-container">
+                <input placeholder="Email" type="email" name="email" id="email" class="input-field" />
+                <label for="email" class="text-label">Email</label>
+            </div>
+            <div class="input-container">
+                <textarea placeholder="Message" type="text" name="message" id="message" class="input-field resize"></textarea>
+                <label for="message" class="text-label">Message</label>
+            </div>
+
+            <div id="submit" class="submit-button">
+                <button>SEND</button>
+            </div>
+        </form>
+
+        <div id="success" class="success">
+            <h1>Thank you for getting in touch!</h1>
+            <br /> We appreciate you contacting us and we will get back in touch with you soon! <br /> Have a great day :)
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

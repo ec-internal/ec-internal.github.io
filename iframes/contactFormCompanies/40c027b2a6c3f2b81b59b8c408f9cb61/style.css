@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw !important;
+} */
+
+.success {
+    width: 60%;
+    margin: 50px 20%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f0edf5;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    display: none;
+}
+
+.success h1 {
+    color: #f0edf5;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+form {
+    flex-basis: 100%;
+    position: relative;
+    order: 2;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+h1 {
+    color: #f0edf5;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.input-container {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 400px;
+    display: block;
+}
+
+.input-container::after {
+    content: "";
+    width: calc(100% + 32px);
+    height: 14px;
+    background-image: url('images/triple-lines.png');
+    -webkit-background-size: 140% 110%;
+    background-size: 140% 110%;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    background-repeat: no-repeat;
+    bottom: -8px;
+}
+
+.input-field {
+    display: block;
+    background-color: #ffffff30;
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    box-shadow: none;
+    font-family: "Poppins", sans-serif;
+    color: #f0edf5;
+    -webkit-appearance: none;
+    resize: none;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+}
+
+.input-field::placeholder {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.input-field:focus,
+.input-field:not(:placeholder-shown) {
+    outline: none;
+}
+
+.text-label {
+    display: block;
+    position: absolute;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    top: 14px;
+    left: 15px;
+    transition: top 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    color: #f0edf5;
+}
+
+.input-field:focus,
+.input-field:not(:placeholder-shown)~.text-label {
+    top: -17px;
+}
+
+.resize {
+    resize: vertical;
+}
+
+.submit-button {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.error {
+    background-color: #ff242430;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+    color: #f0edf5;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 12px 30px 6px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+button:hover {
+    color: #ff4deb;
+}
+
+.submit-button:hover {
+    transform: translateY(-6px);
+}
+
+.submit-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -15%;
+    width: 100%;
+    height: 130%;
+    background-image: url('images/button-border.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+@media (max-width:700px) {
+    .input-field {
+        max-width: calc(100% - 32px);
+    }
+    .input-container {
+        max-width: calc(100% - 32px);
+    }
+    .input-container::after {
+        width: 100%;
+    }
+}
