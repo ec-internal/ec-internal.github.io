@@ -14,15 +14,30 @@
             <!--   <h1>CONTACT</h1> -->
             <div class="input-container">
                 <input placeholder="Company" type="text" name="company" id="company" class="input-field" />
-                <label for="company" class="text-label">Company</label>
+                <label for="company" class="text-label">Company*</label>
             </div>
             <div class="input-container">
                 <input placeholder="Name" type="text" name="name" id="name" class="input-field" />
-                <label for="name" class="text-label">Name</label>
+                <label for="name" class="text-label">Name*</label>
             </div>
             <div class="input-container">
                 <input placeholder="Email" type="email" name="email" id="email" class="input-field" />
-                <label for="email" class="text-label">Email</label>
+                <label for="email" class="text-label">Email*</label>
+            </div>
+            <div class="input-container">
+                <input placeholder="Phone Number" type="tel" name="tel" id="tel" class="input-field" />
+                <label for="tel" class="text-label">Phone Number</label>
+            </div>
+            <div class="checkbox-container">
+                <!--                 <input type="checkbox" name="callBack" id="callBack" class="checkbox" />
+                <label for="callBack" class="text-label">Please call me back</label> -->
+                <label class="checkbox path">
+                    <input type="checkbox"  name="callBack" id="callBack">
+                    <svg viewBox="0 0 21 21">
+                        <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                    </svg>
+                </label>
+                <label class="checkbox-label">Please call me back</label>
             </div>
             <div class="input-container">
                 <textarea placeholder="Message" type="text" name="message" id="message" class="input-field resize"></textarea>

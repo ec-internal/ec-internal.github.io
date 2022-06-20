@@ -6,6 +6,8 @@
      let name = document.getElementById("name").value;
      let email = document.getElementById("email").value;
      let message = document.getElementById("message").value;
+     let tel = document.getElementById("tel").value;
+     let callBack = document.getElementById("callBack").checked;
 
      let success = false;
 
@@ -23,13 +25,15 @@
 
      if (errors.length === 0) {
 
+         let telephoneNotice = callBack ? `Phone number: ${tel} <br/> <i>${name} wants you to call him back!</i>` : `Phone number: ${tel}`
+
          //send email with input information using smtp.js
          Email.send({
              SecureToken: "91d94f52-3aa5-48d7-9f50-e15be2cdc264",
              To: "office@everyonecodes.io",
              From: "hi@xschoenberger.com",
              Subject: `Contact Request from ${name}, ${company}`,
-             Body: `<h1 style="margin: 0; padding:10px 10px 0px 10px;">Contact Request</h1><small style="font-style:italic;font-weight:bold;color:grey;padding: 0px 10px 10px 10px;">from ${name}</small><small style="font-style:italic;font-weight:bold;color:grey;padding: 0px 10px 10px 10px;">company: ${company}</small><p style="padding: 10px;">${message}</p><small style="padding: 10px;">entered email: ${email}</small>`,
+             Body: `<h1 style="margin: 0; padding:10px 10px 0px 10px;">Contact Request</h1><small style="font-style:italic;font-weight:bold;color:grey;padding: 0px 10px 10px 10px;">from ${name}</small><small style="font-style:italic;font-weight:bold;color:grey;padding: 0px 10px 10px 10px;">company: ${company}</small><p style="padding: 10px;">${message}<br/>${telephoneNotice}</p><small style="padding: 10px;">entered email: ${email}</small>`,
          }).then((message) => {
              if (message === "OK") { //on successfull send
                  success = true;
