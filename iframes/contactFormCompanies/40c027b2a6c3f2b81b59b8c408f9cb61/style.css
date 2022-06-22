@@ -192,7 +192,7 @@ button:hover {
 /*////////////////////Check box////////////////*/
 
 .checkbox {
-    --background: rgb(106, 106, 106);
+    --background: rgb(216, 216, 216);
     --border: #d1eedb00;
     --border-hover: #bbc1e1;
     --border-active: #67ffc0;
